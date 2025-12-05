@@ -1,0 +1,13 @@
+#UDT:S88_Motor:1.0
+@base:S88_CM
+$std:S88
+%cat:Motor
+---
+run_cmd:B:0:Run command
+stop_cmd:B:0:Stop command
+running:B:0:Running feedback
+speed_sp:R:0:Speed setpoint %
+speed_fb:R:0:Speed feedback %
+amps:R:0:Current draw
+trip:B:0:Overload trip
+ready:B:0:Ready to start

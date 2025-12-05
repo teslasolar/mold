@@ -1,0 +1,10 @@
+#UDT:HMI_Trend:1.0
+$std:ISA101
+%cat:Widget
+---
+name:S::Trend name
+pens:I:4:Pen count
+span:T:3600:Time span sec
+tags:S::Tag list CSV
+lo:R:0:Y-axis low
+hi:R:100:Y-axis high

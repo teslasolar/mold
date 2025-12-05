@@ -1,0 +1,13 @@
+#UDT:S88_Valve:1.0
+@base:S88_CM
+$std:S88
+%cat:Valve
+---
+opn_cmd:B:0:Open command
+cls_cmd:B:0:Close command
+opn_fb:B:0:Open feedback
+cls_fb:B:0:Close feedback
+trvl:B:0:Traveling
+fail_opn:B:0:Fail to open
+fail_cls:B:0:Fail to close
+pos:R:0:Position 0-100%

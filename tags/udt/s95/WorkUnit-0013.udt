@@ -1,0 +1,11 @@
+#UDT:S95_WorkUnit:1.0
+$std:S95
+%cat:Equipment
+---
+name:S::Work unit name
+code:S::WU code
+wc:S::Parent work center
+sts:I:0:Status
+op:S::Current operation
+rate:R:0:Production rate
+qual:R:100:Quality %

@@ -1,0 +1,12 @@
+#UDT:HMI_Faceplate:1.0
+$std:ISA101
+%cat:Widget
+---
+tag:S::Tag reference
+type:S::Equipment type
+sts:I:0:Status color
+mode:S::Mode display
+sp:R:0:Setpoint
+pv:R:0:Process value
+out:R:0:Output
+alm:B:0:Alarm active

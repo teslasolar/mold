@@ -1,0 +1,16 @@
+#UDT:Mold_Assessment:1.0
+@base:S88_CM
+$std:S88
+%cat:Mold
+---
+unit_id:S::Unit ID F-W-U
+floor:I:0:Floor number
+wing:S::Wing NE/NW/SE/SW
+unit:I:0:Unit number
+sev:I:0:0-4 severity
+moist:R:0:Moisture 0-1
+sqft:R:0:Affected sqft
+src:S::Source type
+pri:R:0:Priority score
+cost:R:0:Est cost $
+hrs:R:0:Est hours

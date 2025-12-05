@@ -1,0 +1,13 @@
+#TAG:Z_NE_LOW:Mold_Zone
+@path:Building/Zones
+$inst:Zone_Status
+%id:C001
+---
+zone:NE_LOW
+wing:NE
+level:LOW
+units:22
+affected:5
+max_sev:3
+avg_sev:1.2
+tot_cost:8500

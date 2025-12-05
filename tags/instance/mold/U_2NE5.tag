@@ -1,0 +1,16 @@
+#TAG:U_2NE5:Mold_Assessment
+@path:Building/Floor2/NE
+$inst:Unit_Assessment
+%id:B001
+---
+unit_id:2-NE-5
+floor:2
+wing:NE
+unit:5
+sev:3
+moist:0.8
+sqft:120
+src:window_leak
+pri:0.82
+cost:2400
+hrs:8

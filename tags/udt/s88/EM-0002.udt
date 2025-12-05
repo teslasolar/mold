@@ -1,0 +1,11 @@
+#UDT:S88_EM:1.0
+@base:S88_CM
+$std:S88
+%cat:EquipmentModule
+---
+state:I:0:State 0=Idle 1=Run 2=Pause 3=Done 4=Stop 5=Abort
+phase:I:0:Current phase
+step:I:0:Current step
+owner:S::Owning unit
+ready:B:0:Ready for command
+busy:B:0:Busy executing

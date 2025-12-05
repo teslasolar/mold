@@ -1,0 +1,12 @@
+#UDT:S88_AOut:1.0
+@base:S88_CM
+$std:S88
+%cat:Analog
+---
+sp:R:0:Setpoint
+out:R:0:Output value
+lo:R:0:Low range
+hi:R:100:High range
+units:S::EU label
+track:B:0:Track enable
+track_v:R:0:Track value

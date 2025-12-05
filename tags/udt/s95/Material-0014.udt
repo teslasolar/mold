@@ -1,0 +1,12 @@
+#UDT:S95_Material:1.0
+$std:S95
+%cat:Resource
+---
+id:S::Material ID
+name:S::Material name
+lot:S::Lot number
+qty:R:0:Quantity
+uom:S::Unit of measure
+loc:S::Location
+sts:I:0:0=Avail 1=Hold 2=QC 3=Reject
+exp:DT::Expiration

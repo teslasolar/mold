@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISA Standards Reference</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="../../" class="nav-logo">🦠 Mold Konomi</a>
+    <ul class="nav-links">
+      <li><a href="../../">Dashboard</a></li>
+      <li><a href="./" class="active">Standards</a></li>
+      <li><a href="../../tags/">Tags</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">ISA Standards Reference</h1>
+      <p class="page-subtitle">Industry standards for batch control, enterprise integration, and HMI design</p>
+    </div>
+
+    <div class="grid grid-3">
+      <!-- ISA-88 -->
+      <a href="88/" class="card" style="text-decoration: none;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🏭</div>
+        <h2 style="color: var(--text-primary);">ISA-88 (S88)</h2>
+        <p style="color: var(--text-secondary);">Batch Process Control</p>
+        <div style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-muted);">
+          Physical Model · Procedural Model · Recipe Model
+        </div>
+      </a>
+
+      <!-- ISA-95 -->
+      <a href="95/" class="card" style="text-decoration: none;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🔗</div>
+        <h2 style="color: var(--text-primary);">ISA-95</h2>
+        <p style="color: var(--text-secondary);">Enterprise-Control Integration</p>
+        <div style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-muted);">
+          5 Hierarchy Levels · Equipment Model · MES/ERP Integration
+        </div>
+      </a>
+
+      <!-- ISA-101 -->
+      <a href="101/" class="card" style="text-decoration: none;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🖥️</div>
+        <h2 style="color: var(--text-primary);">ISA-101</h2>
+        <p style="color: var(--text-secondary);">Human Machine Interfaces</p>
+        <div style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-muted);">
+          HMI Lifecycle · Display Hierarchy · Situational Awareness
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick Reference -->
+    <div class="card mt-2">
+      <div class="card-header">
+        <span class="card-title">📊 Standards Alignment</span>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>ISA-95</th>
+              <th>ISA-88</th>
+              <th>ISA-101</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>4</td>
+              <td>Business Planning (ERP)</td>
+              <td>Enterprise</td>
+              <td>Enterprise Overview</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>MOM/MES</td>
+              <td>Site / Area</td>
+              <td>Area Overview</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Control Systems (PLC/DCS)</td>
+              <td>Process Cell / Unit</td>
+              <td>Unit Display</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Sensors/Actuators</td>
+              <td>Equipment Module</td>
+              <td>Detail/Faceplate</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>Physical Process</td>
+              <td>Control Module</td>
+              <td>Diagnostic</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- UDT/Tag System -->
+    <div class="card mt-2">
+      <div class="card-header">
+        <span class="card-title">🏷️ Tag & UDT System</span>
+        <a href="../../tags/" class="btn btn-secondary">Browse Tags →</a>
+      </div>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+        Token-efficient file formats based on ISA standards for defining User Defined Types and Tag instances.
+      </p>
+      <div class="grid grid-2">
+        <div>
+          <h4>.udt Format</h4>
+          <pre style="background: var(--bg-dark); padding: 1rem; border-radius: var(--radius); font-size: 0.75rem; overflow-x: auto;">#UDT:Name:v1.0
+@base:ParentUDT
+$S88:ControlModule
+---
+name:BOOL:0:Enable
+sp:REAL:0.0:Setpoint
+pv:REAL:0.0:Process Value</pre>
+        </div>
+        <div>
+          <h4>.tag Format</h4>
+          <pre style="background: var(--bg-dark); padding: 1rem; border-radius: var(--radius); font-size: 0.75rem; overflow-x: auto;">#TAG:PMP001:Pump
+@path:Main/Area1/Unit1
+$S88:EquipmentModule
+---
+name:1
+sp:50.0
+mode:AUTO</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../assets/js/mold-konomi.js"></script>
+</body>
+</html>

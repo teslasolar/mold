@@ -1,0 +1,13 @@
+#UDT:S88_CM:1.0
+$std:S88
+%cat:ControlModule
+---
+name:S::Device name
+desc:S::Description
+sts:I:0:Status code
+mode:I:0:Mode 0=OOS 1=Man 2=Auto
+cmd:B:0:Command
+fb:B:0:Feedback
+flt:B:0:Fault active
+alm:B:0:Alarm active
+sim:B:0:Simulate mode

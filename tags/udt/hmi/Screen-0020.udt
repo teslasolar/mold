@@ -1,0 +1,11 @@
+#UDT:HMI_Screen:1.0
+$std:ISA101
+%cat:Display
+---
+name:S::Screen name
+level:I:2:1=Overview 2=Process 3=Detail 4=Diag
+title:S::Display title
+path:S::Navigation path
+area:S::S95 area ref
+parent:S::Parent screen
+access:I:0:Access level

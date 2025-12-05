@@ -1,0 +1,11 @@
+#UDT:S95_WorkCenter:1.0
+$std:S95
+%cat:Equipment
+---
+name:S::Work center name
+code:S::WC code
+area:S::Parent area
+wu_cnt:I:0:Work unit count
+sts:I:0:0=Down 1=Idle 2=Run 3=Maint
+job:S::Current job
+oee:R:0:OEE %

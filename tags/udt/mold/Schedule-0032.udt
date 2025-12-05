@@ -1,0 +1,11 @@
+#UDT:Mold_Schedule:1.0
+$std:S95
+%cat:Mold
+---
+day:I:0:Schedule day
+crew:I:3:Crew size
+hrs_day:R:8:Hours per day
+units:S::Unit IDs CSV
+tot_hrs:R:0:Total hours
+tot_cost:R:0:Total cost
+complete:B:0:Day complete

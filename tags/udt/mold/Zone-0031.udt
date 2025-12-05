@@ -1,0 +1,13 @@
+#UDT:Mold_Zone:1.0
+@base:S95_Area
+$std:S95
+%cat:Mold
+---
+zone:S::Zone ID NE_LOW etc
+wing:S::Wing
+level:S::LOW/HIGH
+units:I:22:Unit count
+affected:I:0:Affected count
+max_sev:I:0:Max severity
+avg_sev:R:0:Avg severity
+tot_cost:R:0:Total est cost

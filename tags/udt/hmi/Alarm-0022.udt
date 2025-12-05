@@ -1,0 +1,11 @@
+#UDT:HMI_Alarm:1.0
+$std:ISA101
+%cat:Alarm
+---
+tag:S::Source tag
+msg:S::Message
+pri:I:2:1=Crit 2=High 3=Med 4=Low
+state:I:0:0=Norm 1=Alm 2=Ack 3=Rtn
+time:DT::Alarm time
+ack_by:S::Ack by
+area:S::Area

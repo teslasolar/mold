@@ -1,0 +1,11 @@
+#UDT:S95_Personnel:1.0
+$std:S95
+%cat:Resource
+---
+id:S::Employee ID
+name:S::Name
+role:S::Role
+area:S::Assigned area
+shift:I:0:Shift 1/2/3
+qual:S::Qualifications
+login:B:0:Logged in

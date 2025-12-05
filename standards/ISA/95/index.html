@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISA-95 Enterprise-Control Integration</title>
+  <link rel="stylesheet" href="../../../assets/css/style.css">
+  <style>
+    .purdue-model { display: flex; flex-direction: column; gap: 0.25rem; }
+    .purdue-level { padding: 1rem; border-radius: var(--radius); display: flex; justify-content: space-between; align-items: center; }
+    .purdue-level .level-num { font-size: 1.5rem; font-weight: 700; opacity: 0.5; }
+    .purdue-level.l4 { background: linear-gradient(90deg, #553c9a, #6b46c1); }
+    .purdue-level.l3 { background: linear-gradient(90deg, #2c5282, #3182ce); }
+    .purdue-level.l2 { background: linear-gradient(90deg, #276749, #38a169); }
+    .purdue-level.l1 { background: linear-gradient(90deg, #975a16, #d69e2e); }
+    .purdue-level.l0 { background: linear-gradient(90deg, #9b2c2c, #e53e3e); }
+    .level-divider { border-left: 2px dashed var(--border); margin: 0.5rem 0; padding-left: 1rem; color: var(--text-muted); font-size: 0.75rem; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="../../../" class="nav-logo">🦠 Mold Konomi</a>
+    <ul class="nav-links">
+      <li><a href="../">← Standards</a></li>
+      <li><a href="../88/">ISA-88</a></li>
+      <li><a href="./" class="active">ISA-95</a></li>
+      <li><a href="../101/">ISA-101</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">🔗 ISA-95</h1>
+      <p class="page-subtitle">Enterprise-Control System Integration | IEC/ISO 62264</p>
+    </div>
+
+    <!-- Overview -->
+    <div class="card mb-2">
+      <h2>Overview</h2>
+      <p>ISA-95 is the international standard for integrating enterprise and control systems. Based on the Purdue Reference Model, it defines 5 hierarchy levels and provides models for equipment, personnel, materials, and operations management.</p>
+      <div class="grid grid-4 mt-2">
+        <div class="stat-card">
+          <div class="value">5</div>
+          <div class="label">Levels</div>
+        </div>
+        <div class="stat-card">
+          <div class="value">8</div>
+          <div class="label">Standard Parts</div>
+        </div>
+        <div class="stat-card">
+          <div class="value">4</div>
+          <div class="label">Resource Models</div>
+        </div>
+        <div class="stat-card">
+          <div class="value">2020</div>
+          <div class="label">Latest Update</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Purdue Model -->
+    <div class="card mb-2">
+      <h3>📊 Purdue Reference Model (5 Levels)</h3>
+      <div class="purdue-model mt-2">
+        <div class="purdue-level l4">
+          <div>
+            <strong>Level 4 — Business Planning & Logistics</strong>
+            <div style="font-size: 0.875rem; opacity: 0.8;">ERP, Supply Chain, Financials | Timeframe: Months/Weeks/Days</div>
+          </div>
+          <div class="level-num">4</div>
+        </div>
+        <div class="level-divider">← Enterprise/Control Boundary →</div>
+        <div class="purdue-level l3">
+          <div>
+            <strong>Level 3 — Manufacturing Operations (MOM/MES)</strong>
+            <div style="font-size: 0.875rem; opacity: 0.8;">Scheduling, Quality, Maintenance | Timeframe: Days/Shifts/Hours</div>
+          </div>
+          <div class="level-num">3</div>
+        </div>
+        <div class="purdue-level l2">
+          <div>
+            <strong>Level 2 — Control Systems (PLC/DCS/SCADA)</strong>
+            <div style="font-size: 0.875rem; opacity: 0.8;">Real-time control, HMI | Timeframe: Seconds/Sub-seconds</div>
+          </div>
+          <div class="level-num">2</div>
+        </div>
+        <div class="purdue-level l1">
+          <div>
+            <strong>Level 1 — Sensing & Manipulation</strong>
+            <div style="font-size: 0.875rem; opacity: 0.8;">Sensors, Actuators, Intelligent Devices</div>
+          </div>
+          <div class="level-num">1</div>
+        </div>
+        <div class="purdue-level l0">
+          <div>
+            <strong>Level 0 — Physical Process</strong>
+            <div style="font-size: 0.875rem; opacity: 0.8;">Actual production process, materials</div>
+          </div>
+          <div class="level-num">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-2">
+      <!-- Equipment Hierarchy -->
+      <div class="card">
+        <h3>🏗️ Equipment Hierarchy</h3>
+        <table>
+          <thead><tr><th>Level</th><th>Entity</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Enterprise</td><td>ACME Corp</td></tr>
+            <tr><td>2</td><td>Site</td><td>Chicago Plant</td></tr>
+            <tr><td>3</td><td>Area</td><td>Production Hall A</td></tr>
+            <tr><td>4</td><td>Work Center</td><td>Packaging Line 1</td></tr>
+            <tr><td>5</td><td>Work Unit</td><td>Labeling Station</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Resource Models -->
+      <div class="card">
+        <h3>📦 Resource Models</h3>
+        <div style="display: grid; gap: 0.75rem;">
+          <div class="stat-card"><div class="label"><strong>Personnel</strong> — Operators, qualifications, schedules</div></div>
+          <div class="stat-card"><div class="label"><strong>Equipment</strong> — Machines, capabilities, maintenance</div></div>
+          <div class="stat-card"><div class="label"><strong>Material</strong> — Raw, WIP, finished goods, lots</div></div>
+          <div class="stat-card"><div class="label"><strong>Physical Asset</strong> — Fixed assets, locations</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Standard Parts -->
+    <div class="card mt-2">
+      <h3>📚 Standard Parts</h3>
+      <div class="table-container">
+        <table>
+          <thead><tr><th>Part</th><th>Title</th><th>Version</th></tr></thead>
+          <tbody>
+            <tr><td>Part 1</td><td>Models and Terminology</td><td>2010</td></tr>
+            <tr><td>Part 2</td><td>Object Model Attributes</td><td>2018</td></tr>
+            <tr><td>Part 3</td><td>Activity Models of MOM</td><td>2013</td></tr>
+            <tr><td>Part 4</td><td>MOM Integration Objects</td><td>2018</td></tr>
+            <tr><td>Part 5</td><td>B2M Transactions</td><td>2018</td></tr>
+            <tr><td>Part 6</td><td>Messaging Service Model</td><td>2014</td></tr>
+            <tr><td>Part 7</td><td>Alias Service Model</td><td>2017</td></tr>
+            <tr><td>Part 8</td><td>Information Exchange Profiles</td><td>2020</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- UDT Templates -->
+    <div class="card mt-2">
+      <div class="card-header">
+        <span class="card-title">🏷️ S95 UDT Templates</span>
+        <a href="../../../tags/udt/s95/" class="btn btn-secondary">View UDTs →</a>
+      </div>
+      <div class="grid grid-2">
+        <div>
+          <h4>Equipment UDTs</h4>
+          <ul style="font-size: 0.875rem; color: var(--text-secondary);">
+            <li>S95_Enterprise — Top-level org</li>
+            <li>S95_Site — Physical location</li>
+            <li>S95_Area — Production area</li>
+            <li>S95_WorkCenter — Production line</li>
+            <li>S95_WorkUnit — Station/cell</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resource UDTs</h4>
+          <ul style="font-size: 0.875rem; color: var(--text-secondary);">
+            <li>S95_Personnel — Operator info</li>
+            <li>S95_Material — Material tracking</li>
+            <li>S95_Equipment — Asset info</li>
+            <li>S95_Segment — Process segment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sources -->
+    <div class="card mt-2" style="font-size: 0.875rem; color: var(--text-muted);">
+      <strong>Sources:</strong>
+      <a href="https://www.isa.org/standards-and-publications/isa-standards/isa-95-standard" target="_blank">ISA-95 Standard</a> |
+      <a href="https://en.wikipedia.org/wiki/ANSI/ISA-95" target="_blank">Wikipedia</a> |
+      <a href="https://www.sw.siemens.com/en-US/technology/isa-95-framework-layers/" target="_blank">Siemens</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+#UDT:S88_Unit:1.0
+@base:S88_EM
+$std:S88
+%cat:Unit
+---
+batch:S::Current batch ID
+recipe:S::Active recipe
+proc:I:0:Procedure state
+uproc:I:0:Unit procedure
+op:I:0:Current operation
+alloc:B:0:Allocated
+held:B:0:Hold active

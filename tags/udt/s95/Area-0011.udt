@@ -1,0 +1,11 @@
+#UDT:S95_Area:1.0
+$std:S95
+%cat:Equipment
+---
+name:S::Area name
+code:S::Area code
+site:S::Parent site
+wc_cnt:I:0:Work center count
+sts:I:0:Status
+oee:R:0:OEE %
+active:B:1:Active

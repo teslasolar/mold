@@ -1,0 +1,14 @@
+#UDT:S88_AIn:1.0
+@base:S88_CM
+$std:S88
+%cat:Analog
+---
+raw:I:0:Raw value
+eu:R:0:Engineering units
+lo:R:0:Low range
+hi:R:100:High range
+units:S::EU label
+hh:R:90:Hi-Hi alarm
+h:R:80:Hi alarm
+l:R:20:Lo alarm
+ll:R:10:Lo-Lo alarm

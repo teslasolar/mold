@@ -1,0 +1,10 @@
+#UDT:HMI_NavItem:1.0
+$std:ISA101
+%cat:Navigation
+---
+label:S::Display label
+screen:S::Target screen
+icon:S::Icon name
+order:I:0:Sort order
+access:I:0:Min access level
+badge:S::Badge value

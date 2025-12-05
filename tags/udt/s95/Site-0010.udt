@@ -1,0 +1,11 @@
+#UDT:S95_Site:1.0
+$std:S95
+%cat:Equipment
+---
+name:S::Site name
+code:S::Site code
+loc:S::Location
+tz:S::Timezone
+sts:I:0:Status
+areas:I:0:Area count
+active:B:1:Active

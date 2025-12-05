@@ -1,0 +1,12 @@
+#UDT:S88_Phase:1.0
+$std:S88
+%cat:Procedural
+---
+name:S::Phase name
+state:I:0:0=Idle 1=Run 2=Held 3=Done 4=Stop 5=Abort
+cmd:I:0:0=None 1=Start 2=Hold 3=Restart 4=Stop 5=Abort 6=Reset
+step:I:0:Current step
+t_run:T:0:Run time
+t_hold:T:0:Hold time
+owner:S::Owning operation
+parms:S::Parameter JSON
