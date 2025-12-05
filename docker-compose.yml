@@ -1,0 +1,78 @@
+# 📦 Kontainer Setup - Mold Konomi System
+# Total footprint: <500MB
+
+version: '3.8'
+
+services:
+  # REST API Service
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["python", "-m", "mold_konomi.api"]
+    ports:
+      - "3001:3001"
+    environment:
+      - DB_URL=${DB_URL:-postgresql://localhost:5432/mold}
+      - REDIS_URL=${REDIS_URL:-redis://redis:6379}
+      - API_HOST=0.0.0.0
+      - API_PORT=3001
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - mold-network
+
+  # WebSocket Service
+  ws:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["python", "-m", "mold_konomi.websocket_server"]
+    ports:
+      - "6789:6789"
+    environment:
+      - WS_HOST=0.0.0.0
+      - WS_PORT=6789
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+    networks:
+      - mold-network
+
+  # Redis Cache (optional)
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 256M
+    volumes:
+      - redis-data:/data
+    networks:
+      - mold-network
+
+networks:
+  mold-network:
+    driver: bridge
+
+volumes:
+  redis-data:
