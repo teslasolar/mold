@@ -1,0 +1,15 @@
+{
+  "name": "mold-konomi",
+  "version": "1.0.0",
+  "description": "Mold Konomi System - Tag-based HMI for mold monitoring",
+  "scripts": {
+    "dev": "serve -l 8080",
+    "start": "serve -l 80",
+    "test": "echo \"No tests configured\""
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "keywords": ["mold", "monitoring", "hmi", "isa-88", "isa-95", "isa-101"],
+  "license": "MIT"
+}

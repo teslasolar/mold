@@ -1,0 +1,18 @@
+{
+  "headers": [
+    {
+      "source": "**/*.tag",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "**/*.udt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+      ]
+    }
+  ],
+  "cleanUrls": false,
+  "trailingSlash": true
+}
