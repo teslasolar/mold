@@ -1,0 +1,10 @@
+#UDT:HMI_Page:1.0
+$std:ISA101
+%cat:Display
+---
+id:S::Page identifier
+title:S::Page title
+subtitle:S::Page subtitle
+icon:S::Page icon
+path:S::URL path
+tmpl:S::Template name

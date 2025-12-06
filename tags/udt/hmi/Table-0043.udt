@@ -1,0 +1,7 @@
+#UDT:HMI_Table:1.0
+$std:ISA101
+%cat:Widget
+---
+id:S::Table identifier
+cols:S::Comma-sep col names
+keys:S::Comma-sep data keys

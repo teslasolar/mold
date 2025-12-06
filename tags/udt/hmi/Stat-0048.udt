@@ -1,0 +1,9 @@
+#UDT:HMI_Stat:1.0
+$std:ISA101
+%cat:Widget
+---
+id:S::Stat card ID
+label:S::Stat label
+icon:S::Stat icon
+key:S::Data key
+fmt:S::Format type
