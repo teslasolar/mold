@@ -1,0 +1,6 @@
+#UDT:HMI_Nav:1.0
+$std:ISA101
+%cat:Navigation
+---
+items:S::Comma-sep item IDs
+logo:S::Logo link path

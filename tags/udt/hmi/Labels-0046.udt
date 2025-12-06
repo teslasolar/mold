@@ -1,0 +1,6 @@
+#UDT:HMI_Labels:1.0
+$std:ISA101
+%cat:I18n
+---
+grp:S::Label group
+data:S::JSON key:value pairs

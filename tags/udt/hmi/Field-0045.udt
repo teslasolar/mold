@@ -1,0 +1,11 @@
+#UDT:HMI_Field:1.0
+$std:ISA101
+%cat:Widget
+---
+id:S::Field identifier
+label:S::Field label
+type:S:text:input|select|range|textarea
+opts:S::Options for select
+min:R:0:Min value
+max:R:100:Max value
+ph:S::Placeholder

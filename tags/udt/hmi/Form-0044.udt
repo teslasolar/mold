@@ -1,0 +1,7 @@
+#UDT:HMI_Form:1.0
+$std:ISA101
+%cat:Widget
+---
+id:S::Form identifier
+fields:S::Comma-sep field IDs
+submit:S::Submit button text

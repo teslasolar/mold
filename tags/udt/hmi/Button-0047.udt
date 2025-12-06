@@ -1,0 +1,9 @@
+#UDT:HMI_Button:1.0
+$std:ISA101
+%cat:Widget
+---
+id:S::Button identifier
+text:S::Button text
+icon:S::Button icon
+style:S:secondary:primary|secondary|danger
+action:S::Action name

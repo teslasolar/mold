@@ -1,0 +1,9 @@
+#UDT:HMI_App:1.0
+$std:ISA101
+%cat:Config
+---
+name:S::Application name
+logo:S::Logo text/emoji
+ver:S:1.0:Version
+css:S::CSS path
+js:S::JS path
