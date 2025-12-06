@@ -4,10 +4,13 @@
  */
 const TagLoader = (function() {
   const cache = new Map();
-  const basePath = location.pathname.includes('/') && !location.pathname.endsWith('/index.html')
-    ? location.pathname.split('/').slice(0, -1).join('/') + '/'
-    : './';
-  const tagsPath = basePath.replace(/[^/]+\/?$/, '') + 'tags/instance/hmi/';
+
+  // Calculate path depth from URL
+  const path = location.pathname;
+  const segments = path.split('/').filter(s => s && s !== 'index.html');
+  const depth = segments.length;
+  const prefix = depth > 0 ? '../'.repeat(depth) : './';
+  const tagsPath = prefix + 'tags/instance/hmi/';
 
   // Parse .tag file format
   function parseTag(content) {
@@ -82,8 +85,6 @@ const TagLoader = (function() {
   function buildNav(tags, activePage = 'dashboard') {
     const app = tags.app?.data || {};
     const navItems = getLabels(tags, 'nav-items');
-    const isSubdir = !location.pathname.endsWith('/index.html') && location.pathname.split('/').filter(Boolean).length > 1;
-    const prefix = isSubdir ? '../' : './';
 
     return `<nav class="nav">
       <a href="${prefix}" class="nav-logo">${app.logo || '🦠 App'}</a>
@@ -204,6 +205,8 @@ const TagLoader = (function() {
     buildStatCard,
     loading,
     coreTags,
-    cache
+    cache,
+    prefix,
+    tagsPath
   };
 })();
